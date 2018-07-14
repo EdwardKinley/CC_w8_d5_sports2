@@ -68,6 +68,11 @@ public class Runner {
         List<Player> manager2Players = DBManager.getPlayersOfManager(manager2);
         List<Player> manager3Players = DBManager.getPlayersOfManager(manager3);
 
+        List<Manager> competition1managers = DBCompetition.getManagersInCompetition(competition1);
+        List<Manager> competition2managers = DBCompetition.getManagersInCompetition(competition2);
+
+
+
     }
 
 }

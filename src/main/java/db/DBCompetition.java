@@ -1,12 +1,14 @@
 package db;
 
 import models.Competition;
+import models.Manager;
 import models.Team;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DBCompetition {
@@ -26,6 +28,13 @@ public class DBCompetition {
             session.close();
         }
         return teams;
+    }
+
+    public static List<Manager> getManagersInCompetition(Competition competition) {
+        List<Team> teams = DBCompetition.getTeamsInCompetition(competition);
+        List<Manager> managers = new ArrayList<Manager>();
+        for (Team team : teams) { managers.add(DBTeam.getManagerOfTeam(team)); }
+        return managers;
     }
 
 }
