@@ -64,6 +64,10 @@ public class Runner {
         Manager player1Manager = DBPlayer.getManagerOfPlayer(player1);
         Manager player8Manager = DBPlayer.getManagerOfPlayer(player8);
 
+        List<Player> manager1Players = DBManager.getPlayersOfManager(manager1);
+        List<Player> manager2Players = DBManager.getPlayersOfManager(manager2);
+        List<Player> manager3Players = DBManager.getPlayersOfManager(manager3);
+
     }
 
 }
