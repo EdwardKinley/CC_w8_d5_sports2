@@ -42,8 +42,11 @@ public class DBCompetition {
         return players;
     }
 
-//    public static List<Captain> getCaptainsInCompetition(Competition competition) {
-//
-//    }
+    public static List<Captain> getCaptainsInCompetition(Competition competition) {
+        List<Team> teams = DBCompetition.getTeamsInCompetition(competition);
+        List<Captain> captains = new ArrayList<Captain>();
+        for (Team team : teams) { captains.addAll(DBTeam.getCaptainsOfTeam(team)); }
+        return captains;
+    }
 
 }
