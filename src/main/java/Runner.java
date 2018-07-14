@@ -1,3 +1,4 @@
+import db.DBCompetition;
 import db.DBHelper;
 import db.DBTeam;
 import models.Competition;
@@ -50,6 +51,8 @@ public class Runner {
         Manager team1Manager = DBTeam.getManagerOfTeam(team1);
 
         List<Player> team1Players = DBTeam.getPlayersOfTeam(team1);
+
+        List<Team> competition1Teams = DBCompetition.getTeamsInCompetition(competition1);
 
     }
 
