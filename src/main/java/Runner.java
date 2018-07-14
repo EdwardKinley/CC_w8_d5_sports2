@@ -1,8 +1,5 @@
 import db.*;
-import models.Competition;
-import models.Manager;
-import models.Player;
-import models.Team;
+import models.*;
 
 import java.util.List;
 
@@ -10,8 +7,8 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Competition competition1 = new Competition("CodeClan cup", "cup");
-        Competition competition2 = new Competition("CodeClan league", "league");
+        Competition competition1 = new Competition("CodeClan cup", CompetitionType.CUP);
+        Competition competition2 = new Competition("CodeClan league", CompetitionType.LEAGUE);
         DBHelper.save(competition1);
         DBHelper.save(competition2);
 

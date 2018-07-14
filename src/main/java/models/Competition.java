@@ -9,14 +9,22 @@ public class Competition {
 
     private int id;
     private String name;
-    private String type;
+    private CompetitionType competitionType;
     private List<Team> teams;
 
     public Competition() {}
 
-    public Competition(String name, String type) {
+    public Competition(String name, CompetitionType competitionType) {
         this.name = name;
-        this.type = type;
+        this.competitionType = competitionType;
+    }
+
+    @Enumerated(EnumType.STRING)
+    public CompetitionType getCompetitionType() {
+        return competitionType;
+    }
+    public void setCompetitionType(CompetitionType competitionType) {
+        this.competitionType = competitionType;
     }
 
     @Id
@@ -35,14 +43,6 @@ public class Competition {
     }
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Column(name = "type")
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
     }
 
     @OneToMany(mappedBy = "competition", fetch = FetchType.LAZY)
