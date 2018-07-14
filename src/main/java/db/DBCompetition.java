@@ -2,6 +2,7 @@ package db;
 
 import models.Competition;
 import models.Manager;
+import models.Player;
 import models.Team;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -35,6 +36,13 @@ public class DBCompetition {
         List<Manager> managers = new ArrayList<Manager>();
         for (Team team : teams) { managers.add(DBTeam.getManagerOfTeam(team)); }
         return managers;
+    }
+
+    public static List<Player> getPlayersInCompetition(Competition competition) {
+        List<Team> teams = DBCompetition.getTeamsInCompetition(competition);
+        List<Player> players = new ArrayList<Player>();
+        for (Team team : teams) { players.addAll(DBTeam.getPlayersOfTeam(team)); }
+        return players;
     }
 
 }
