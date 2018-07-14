@@ -15,8 +15,9 @@ public class Team {
 
     public Team() {}
 
-    public Team(String name) {
+    public Team(String name, Competition competition) {
         this.name = name;
+        this.competition = competition;
     }
 
     @Id

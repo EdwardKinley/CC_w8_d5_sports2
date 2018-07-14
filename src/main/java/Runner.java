@@ -11,9 +11,9 @@ public class Runner {
         Competition competition1 = new Competition("CodeClan cup", "cup");
         DBHelper.save(competition1);
 
-        Team team1 = new Team("Edinburgh");
-        Team team2 = new Team("Leeds");
-        Team team3 = new Team("Oxford");
+        Team team1 = new Team("Edinburgh", competition1);
+        Team team2 = new Team("Leeds", competition1);
+        Team team3 = new Team("Oxford", competition1);
         DBHelper.save(team1);
         DBHelper.save(team2);
         DBHelper.save(team3);
