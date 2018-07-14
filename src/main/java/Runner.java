@@ -78,6 +78,19 @@ public class Runner {
         List<Player> competition1Players = DBCompetition.getPlayersInCompetition(competition1);
         List<Player> competition2Players = DBCompetition.getPlayersInCompetition(competition2);
 
+        List<Player> captain1PlayersIncludingCaptain = DBCaptain.getPlayersOfCaptainIncludingCaptain(captain1);
+        List<Player> captain2PlayersIncludingCaptain = DBCaptain.getPlayersOfCaptainIncludingCaptain(captain2);
+        List<Player> captain3PlayersIncludingCaptain = DBCaptain.getPlayersOfCaptainIncludingCaptain(captain3);
+
+        List<Player> captain1PlayersExcludingCaptain = DBCaptain.getPlayersOfCaptainExcludingCaptain(captain1);
+        List<Player> captain2PlayersExcludingCaptain = DBCaptain.getPlayersOfCaptainExcludingCaptain(captain2);
+        List<Player> captain3PlayersExcludingCaptain = DBCaptain.getPlayersOfCaptainExcludingCaptain(captain3);
+
+        List<Player> player5Teammates = DBPlayer.getTeammatesOfPlayer(player5);
+
+//        List<Captain> competition1Captains = DBCaptain.getCaptainsInCompetition(competition1);
+//        List<Captain> competition2Captains = DBCaptain.getCaptainsInCompetition(competition2);
+
     }
 
 }
