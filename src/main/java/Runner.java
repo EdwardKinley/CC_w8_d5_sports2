@@ -1,4 +1,5 @@
 import db.DBHelper;
+import db.DBTeam;
 import models.Competition;
 import models.Manager;
 import models.Player;
@@ -43,6 +44,8 @@ public class Runner {
         DBHelper.save(manager1);
         DBHelper.save(manager2);
         DBHelper.save(manager3);
+
+        Manager team1manager = DBTeam.getManagerOfTeam(team1);
 
     }
 
