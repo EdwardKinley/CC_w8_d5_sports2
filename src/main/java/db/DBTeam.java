@@ -1,5 +1,6 @@
 package db;
 
+import models.Captain;
 import models.Manager;
 import models.Player;
 import models.Team;
@@ -43,5 +44,38 @@ public class DBTeam {
         }
         return players;
     }
+
+    public static List<Captain> getCaptainsOfTeam(Team team) {
+        session = HibernateUtil.getSessionFactory().openSession();
+        List<Captain> captains = null;
+        try {
+            Criteria cr = session.createCriteria(Captain.class);
+            cr.add(Restrictions.eq("team", team));
+            captains = cr.list();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return captains;
+    }
+
+    public static Captain getCaptainOfTeam(Team team) {
+        session = HibernateUtil.getSessionFactory().openSession();
+        Captain captain = null;
+        try {
+            Criteria cr = session.createCriteria(Captain.class);
+            cr.add(Restrictions.eq("team", team));
+            captain = (Captain) cr.uniqueResult();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return captain;
+    }
+
+
+
 
 }

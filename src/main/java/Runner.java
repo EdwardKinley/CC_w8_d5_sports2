@@ -88,6 +88,9 @@ public class Runner {
 
         List<Player> player5Teammates = DBPlayer.getTeammatesOfPlayer(player5);
 
+        List<Captain> team3Captains = DBTeam.getCaptainsOfTeam(team3);
+        Captain team3Captain = DBTeam.getCaptainOfTeam(team3);
+
 //        List<Captain> competition1Captains = DBCaptain.getCaptainsInCompetition(competition1);
 //        List<Captain> competition2Captains = DBCaptain.getCaptainsInCompetition(competition2);
 

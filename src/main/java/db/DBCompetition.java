@@ -1,9 +1,6 @@
 package db;
 
-import models.Competition;
-import models.Manager;
-import models.Player;
-import models.Team;
+import models.*;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -44,5 +41,9 @@ public class DBCompetition {
         for (Team team : teams) { players.addAll(DBTeam.getPlayersOfTeam(team)); }
         return players;
     }
+
+//    public static List<Captain> getCaptainsInCompetition(Competition competition) {
+//
+//    }
 
 }
