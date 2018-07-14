@@ -5,6 +5,8 @@ import models.Manager;
 import models.Player;
 import models.Team;
 
+import java.util.List;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -45,7 +47,9 @@ public class Runner {
         DBHelper.save(manager2);
         DBHelper.save(manager3);
 
-        Manager team1manager = DBTeam.getManagerOfTeam(team1);
+        Manager team1Manager = DBTeam.getManagerOfTeam(team1);
+
+        List<Player> team1Players = DBTeam.getPlayersOfTeam(team1);
 
     }
 
