@@ -61,6 +61,9 @@ public class Runner {
         Competition manager2Competition = DBManager.getCompetitionForManager(manager2);
         Competition manager3Competition = DBManager.getCompetitionForManager(manager3);
 
+        Manager player1Manager = DBPlayer.getManagerOfPlayer(player1);
+        Manager player8Manager = DBPlayer.getManagerOfPlayer(player8);
+
     }
 
 }
