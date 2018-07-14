@@ -1,7 +1,4 @@
-import db.DBCompetition;
-import db.DBHelper;
-import db.DBPlayer;
-import db.DBTeam;
+import db.*;
 import models.Competition;
 import models.Manager;
 import models.Player;
@@ -14,11 +11,13 @@ public class Runner {
     public static void main(String[] args) {
 
         Competition competition1 = new Competition("CodeClan cup", "cup");
+        Competition competition2 = new Competition("CodeClan league", "league");
         DBHelper.save(competition1);
+        DBHelper.save(competition2);
 
         Team team1 = new Team("Edinburgh", competition1);
         Team team2 = new Team("Leeds", competition1);
-        Team team3 = new Team("Oxford", competition1);
+        Team team3 = new Team("Oxford", competition2);
         DBHelper.save(team1);
         DBHelper.save(team2);
         DBHelper.save(team3);
@@ -58,6 +57,9 @@ public class Runner {
         Competition player1Competition = DBPlayer.getCompetitionForPlayer(player1);
         Competition player4Competition = DBPlayer.getCompetitionForPlayer(player4);
         Competition player7Competition = DBPlayer.getCompetitionForPlayer(player7);
+
+        Competition manager2Competition = DBManager.getCompetitionForManager(manager2);
+        Competition manager3Competition = DBManager.getCompetitionForManager(manager3);
 
     }
 
