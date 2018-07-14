@@ -15,5 +15,6 @@
         <mapping class = "models.Team"/>
         <mapping class = "models.Manager"/>
         <mapping class = "models.Player"/>
+        <mapping class = "models.Captain"/>
     </session-factory>
 </hibernate-configuration>

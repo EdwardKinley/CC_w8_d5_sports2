@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "players")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Player {
 
     private int id;

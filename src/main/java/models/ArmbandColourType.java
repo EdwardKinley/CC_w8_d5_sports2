@@ -1,6 +1,6 @@
 package models;
 
-public enum ColourType {
+public enum ArmbandColourType {
 
     BLACK,
     WHITE,

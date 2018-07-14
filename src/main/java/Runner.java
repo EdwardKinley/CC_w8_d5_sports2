@@ -45,6 +45,13 @@ public class Runner {
         DBHelper.save(manager2);
         DBHelper.save(manager3);
 
+        Captain captain1 = new Captain("Nick", team1, ArmbandColourType.BLUE);
+        Captain captain2 = new Captain("Fia", team2, ArmbandColourType.YELLOW);
+        Captain captain3 = new Captain("Caroline", team3, ArmbandColourType.RED);
+        DBHelper.save(captain1);
+        DBHelper.save(captain2);
+        DBHelper.save(captain3);
+
         Manager team1Manager = DBTeam.getManagerOfTeam(team1);
 
         List<Player> team1Players = DBTeam.getPlayersOfTeam(team1);
